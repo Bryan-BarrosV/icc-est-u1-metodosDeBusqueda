@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Persona;
 import views.ShowConsole;
 
 public class MetodosBusqueda {
@@ -8,7 +9,7 @@ public class MetodosBusqueda {
     private ShowConsole sConsole;
 
     public MetodosBusqueda() {
-        this.arreglo = new int[]{10, 11, -2, 5, 6, 8, 15, 22};
+        this.arreglo = new int[] { 10, 11, -2, 5, 6, 8, 15, 22 };
         this.sConsole = new ShowConsole();
 
         sConsole.printArray(arreglo);
@@ -62,4 +63,40 @@ public class MetodosBusqueda {
         }
         return null;
     }
+
+    public Persona serchPersonByName(Persona[] personas, String name) {
+        for (Persona persona : personas) {
+            if (persona.getName().equals(name)) {
+                return persona;
+            }
+        }
+        return null;
+    }
+
+    public Persona findPersonaByAge(Persona[] personas, int age) {
+        for (Persona persona : personas) {
+            if (persona.getAge() > age && persona.getAge() % 2 != 0) {
+                return persona;
+            }
+        }
+        return null;
+    }
+    
+    public Persona findPersonaByValueName(Persona[] personas, int valorBuscado) {
+    for (Persona persona : personas) { 
+        int valorAsciiTotal = 0;
+        String nombre = persona.getName();
+
+        for (int i = 0; i < nombre.length(); i++) {
+            valorAsciiTotal += (int) nombre.charAt(i);
+        }
+
+        if (valorAsciiTotal == valorBuscado) {
+            return persona; 
+        }
+    }
+    return null; 
+}
+
+
 }

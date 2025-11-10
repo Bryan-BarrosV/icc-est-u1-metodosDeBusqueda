@@ -1,5 +1,7 @@
 package views;
 
+import models.Persona;
+
 public class ShowConsole {
 
     public ShowConsole(){}
@@ -25,5 +27,34 @@ public class ShowConsole {
         } else {
             System.out.println("El número {" + value + "} se encontró en la posición: " + result);
         }
+    }
+
+    public void showPersonResult(Persona resultadoPersona, String name) {
+        // if (resultadoPersona == null) {
+        //     System.out.println("No se encontro la Persona con el nombre: " + name);
+        // }else{
+        //     System.out.println("Se encontro la persona con el nombre: "+ name);
+        // }
+        System.out.println(
+            resultadoPersona != null ? "Se encontro a " + resultadoPersona : "No se encontro a una persona con el nommbre: "+ name
+        );
+    }
+
+    public void showPersonResult(Persona resultadoPersona, int age) {
+        // if (resultadoPersona == null ) {
+        //     System.out.println("No se encontro la edad diferente de null" + age);
+        // }else{
+        //     System.out.println("Se encontro la edad  ");
+        // }
+        System.out.println(
+            resultadoPersona != null ?"Se escribe a " + resultadoPersona :"No se encontro a un persona con el nombre " + age
+        );
+
+    }
+
+    public void showPersonResult3(Persona resultadoPersona3, int i, boolean valorNombre) {
+        System.out.println(
+            resultadoPersona3 != null ?"El nombre buscado por valor es:  " + resultadoPersona3 :"No se encontro a un persona con el nombre " + i+ "A"
+        );
     }
 }

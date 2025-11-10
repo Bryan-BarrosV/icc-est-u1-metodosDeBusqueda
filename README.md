@@ -8,6 +8,12 @@
 ---
 ## Resultado Esperados
 ![Resultados](assets/MetodosBusqueda.png)
+---
+---
+# Practica 10/11/2025
+![Resultados](assets/MetodosBusqueda2.png)
+---
+---
 
 ##  Conceptos Aplicados
 
